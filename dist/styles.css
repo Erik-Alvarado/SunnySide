@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto Slab", serif;
+}
+
+body {
+  font-size: 18px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+/*# sourceMappingURL=styles.css.map */
