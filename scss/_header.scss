@@ -1,0 +1,51 @@
+header {
+  background-image: url("/images/mobile/image-header.jpg");
+  height: 33.65rem;
+  background-size: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    .link-holder {
+      display: flex;
+      .links {
+        display: none;
+        list-style: none;
+      }
+    }
+    .ham-menu {
+      display: flex;
+      height: 1rem;
+      width: 1.5rem;
+      flex-direction: column;
+      justify-content: space-between;
+      transform-origin: left center;
+      transition: ease 0.3s;
+      div {
+        height: 2px;
+        background-color: $base;
+      }
+    }
+  }
+  .contain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5rem;
+    h1 {
+      text-align: center;
+      color: $base;
+      text-transform: uppercase;
+      font-size: 3rem;
+    }
+    .arrow {
+      margin-top: 2rem;
+    }
+  }
+}

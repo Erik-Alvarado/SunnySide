@@ -20,51 +20,112 @@
   </head>
   <body>
     <header>
-      <nav class="navbar">About Services Projects Contact</nav>
-      <div class="ham-menu">
-        <div></div>
-        <div></div>
-        <div></div>
+      <nav class="navbar">
+        <a href="#"><img src="/images/logo.svg" alt="SunnySide" /></a>
+        <section class="link-holder">
+          <ul class="links">
+            <li class="link"><a href="#">About</a></li>
+            <li class="link"><a href="#">Services</a></li>
+            <li class="link"><a href="#">Projects</a></li>
+            <li class="link"><a href="#">Contact</a></li>
+          </ul>
+        </section>
+        <div class="ham-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </nav>
+      <div class="contain">
+        <h1>We are creatives</h1>
+        <span class="arrow"
+          ><img src="/images/icon-arrow-down.svg" alt="scroll down"
+        /></span>
       </div>
-      <h1>We are creatives</h1>
     </header>
 
     <main class="container">
-      <section class="full-bar">
-        Transform your brand We are a full-service creative agency specializing
-        in helping brands grow fast. Engage your clients through compelling
-        visuals that do most of the marketing for you. Learn more
-      </section>
-      <section class="full-bar">
+      <section class="full-bar" id="egg">
         <span class="art"></span>
-        Stand out to the right audience Using a collaborative formula of
-        designers, researchers, photographers, videographers, and copywriters,
-        we’ll build and extend your brand in digital places. Learn more
+        <div class="text">
+          <h2>Transform your brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <div class="learn">
+            <a href="#">
+              <h5>Learn more</h5>
+            </a>
+            <span></span>
+          </div>
+        </div>
       </section>
-      <section class="card">
-        Graphic design Great design makes you memorable. We deliver artwork that
-        underscores your brand message and captures potential clients’
-        attention.
+      <section class="full-bar" id="cup">
+        <span class="art"></span>
+        <div class="text">
+          <h2>Stand out to the right audience</h2>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <div class="learn">
+            <a href="#">
+              <h5>Learn more</h5>
+            </a>
+            <span></span>
+          </div>
+        </div>
       </section>
-      <section class="card">
-        Photography Increase your credibility by getting the most stunning,
-        high-quality photos that improve your business image.
+      <section class="card" id="graphics">
+        <h2>Graphic design</h2>
+        <p>
+          Great design makes you memorable. We deliver artwork that underscores
+          your brand message and captures potential clients’ attention.
+        </p>
+      </section>
+      <section class="card" id="photos">
+        <h2>Photography</h2>
+        <p>
+          Increase your credibility by getting the most stunning, high-quality
+          photos that improve your business image.
+        </p>
       </section>
       <section class="testimonials">
-        Client testimonials
+        <h3>Client testimonials</h3>
         <div class="voice">
-          We put our trust in Sunnyside and they delivered, making sure our
-          needs were met and deadlines were always hit. Emily R. Marketing
-          Director
+          <span class="profile"></span>
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div class="person">
+            <span class="name">Emily R.</span>
+            <span class="position">Marketing Director</span>
+          </div>
         </div>
         <div class="voice">
-          Sunnyside’s enthusiasm coupled with their keen interest in our brand’s
-          success made it a satisfying and enjoyable experience. Thomas S. Chief
-          Operating Officer
+          <span class="profile"></span>
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div class="person">
+            <span class="name">Thomas S.</span>
+            <span class="position">Chief Operating Officer</span>
+          </div>
         </div>
         <div class="voice">
-          Incredible end result! Our sales increased over 400% when we worked
-          with Sunnyside. Highly recommended! Jennie F. Business Owner
+          <p>
+            Incredible end result! Our sales increased over 400% when we worked
+            with Sunnyside. Highly recommended!
+          </p>
+          <div class="person">
+            <span class="name">Jennie F.</span>
+            <span class="position">Business Owner</span>
+          </div>
         </div>
       </section>
       <span class="bottom-img"></span>
@@ -79,5 +140,6 @@
         >. Coded by <a href="#">Your Name Here</a>.
       </div>
     </footer>
+    <script src="/js/script.js"></script>
   </body>
 </html>

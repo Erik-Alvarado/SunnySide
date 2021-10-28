@@ -1,0 +1,115 @@
+main {
+}
+
+.container {
+  .full-bar {
+    display: flex;
+    flex-direction: column;
+    .art {
+      height: 19.5rem;
+      background-size: 100%;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+    .text {
+      padding: 1.5rem;
+      text-align: center;
+      margin: 1rem 0 2rem;
+      h2 {
+        font-size: 2rem;
+        padding: 1rem 0.5rem;
+        color: $veryDarkDesat;
+      }
+      p {
+        margin-bottom: 2rem;
+        color: $darkGrayBlue;
+        line-height: 1.75rem;
+      }
+      .learn {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        a {
+          text-decoration: none;
+          z-index: 1;
+          h5 {
+            font-size: 1rem;
+            text-transform: uppercase;
+            color: $veryDarkDesat;
+          }
+        }
+        span {
+          position: absolute;
+          width: 8rem;
+          border-radius: 5rem;
+          height: 8px;
+          z-index: 0;
+          align-self: center;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          opacity: 25%;
+          margin: auto;
+        }
+      }
+    }
+    &#egg {
+      .art {
+        background-image: url("/images/mobile/image-transform.jpg");
+      }
+      .learn {
+        span {
+          background-color: $yellow;
+        }
+      }
+    }
+    &#cup {
+      .art {
+        background-image: url("/images/mobile/image-stand-out.jpg");
+      }
+      .learn {
+        span {
+          background-color: $softRed;
+        }
+      }
+    }
+  }
+  .card {
+    height: 37.5rem;
+    padding: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: flex-end;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+
+    h2 {
+      font-size: 1.75rem;
+      margin-bottom: 1.5rem;
+    }
+    p {
+      font-size: 16px;
+      line-height: 1.5rem;
+    }
+    &#graphics {
+      background-image: url("/images/mobile/image-graphic-design.jpg");
+      h2 {
+        color: $graphicTextCyan;
+      }
+      p {
+        color: $graphicTextCyan;
+      }
+    }
+    &#photos {
+      background-image: url("/images/mobile/image-photography.jpg");
+      h2 {
+        color: $photoTextBlue;
+      }
+      P {
+        color: $photoTextBlue;
+      }
+    }
+  }
+}
