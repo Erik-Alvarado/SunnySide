@@ -41,11 +41,26 @@ header .navbar {
 
 header .navbar .link-holder {
   display: flex;
+  position: relative;
 }
 
 header .navbar .link-holder .links {
   display: none;
   list-style: none;
+}
+
+header .navbar.active .link-holder {
+  position: absolute;
+  background-color: white;
+  right: 0;
+  left: 0;
+  top: 6rem;
+  margin: auto;
+}
+
+header .navbar.active .link-holder .links {
+  display: flex;
+  flex-direction: column;
 }
 
 header .navbar .ham-menu {
@@ -202,5 +217,165 @@ header .contain .arrow {
 
 .container .card#photos P {
   color: #19536b;
+}
+
+.container .testimonials {
+  padding: 3.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.container .testimonials h4 {
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 3px;
+  color: #a7abae;
+}
+
+.container .testimonials .voice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .testimonials .voice .profile {
+  width: 3.5rem;
+  height: 3.5rem;
+  background-size: contain;
+  border-radius: 5rem;
+  margin: 3rem 0 2rem;
+}
+
+.container .testimonials .voice .profile#emily {
+  background-image: url("/images/image-emily.jpg");
+}
+
+.container .testimonials .voice .profile#thomas {
+  background-image: url("/images/image-thomas.jpg");
+}
+
+.container .testimonials .voice .profile#jennie {
+  background-image: url("/images/image-jennie.jpg");
+}
+
+.container .testimonials .voice p {
+  text-align: center;
+  color: #5a636c;
+  line-height: 1.75rem;
+}
+
+.container .testimonials .voice .person {
+  margin: 1.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container .testimonials .voice .person .name {
+  font-family: "Fraunces", serif;
+  color: #23303e;
+}
+
+.container .testimonials .voice .person .position {
+  margin-top: 0.5rem;
+  color: #a7abae;
+  font-size: 0.75rem;
+}
+
+.container .bottom-img {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.container .bottom-img span {
+  height: 11.75rem;
+  width: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.container .bottom-img .milk {
+  background-image: url("/images/mobile/image-gallery-milkbottles.jpg");
+}
+
+.container .bottom-img .orange {
+  background-image: url("/images/mobile/image-gallery-orange.jpg");
+}
+
+.container .bottom-img .cone {
+  background-image: url("/images/mobile/image-gallery-cone.jpg");
+}
+
+.container .bottom-img .sugar {
+  background-image: url("/images/mobile/image-gallery-sugar-cubes.jpg");
+}
+
+footer {
+  background-color: #90d4c5;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .foot-logo {
+  width: 10rem;
+  filter: invert(31%) sepia(15%) saturate(1192%) hue-rotate(116deg) brightness(50%) contrast(96%);
+}
+
+footer .foot-nav {
+  margin: 2.5rem 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+footer .foot-nav a {
+  text-decoration: none;
+  color: #458c7e;
+}
+
+footer .social {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin: 3rem;
+}
+
+footer .social span {
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  margin: 0 1rem;
+}
+
+footer .social .face {
+  background-image: url("/images/icon-facebook.svg");
+}
+
+footer .social .insta {
+  background-image: url("/images/icon-instagram.svg");
+}
+
+footer .social .twit {
+  background-image: url("/images/icon-twitter.svg");
+  height: 17px;
+}
+
+footer .social .pint {
+  background-image: url("/images/icon-pinterest.svg");
+}
+
+footer .attribution {
+  font-size: 15px;
+  padding: 0 1rem;
+  text-align: center;
+  color: #25564b;
+}
+
+footer .attribution a {
+  text-decoration: none;
+  color: #458c7e;
+  font-weight: 700;
 }
 /*# sourceMappingURL=styles.css.map */

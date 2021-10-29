@@ -1,0 +1,58 @@
+footer {
+  background-color: $footer;
+  padding: 3rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  .foot-logo {
+    width: 10rem;
+    filter: invert(31%) sepia(15%) saturate(1192%) hue-rotate(116deg)
+      brightness(50%) contrast(96%);
+  }
+  .foot-nav {
+    margin: 2.5rem 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    a {
+      text-decoration: none;
+      color: $footerCyan;
+    }
+  }
+  .social {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin: 3rem;
+    span {
+      width: 20px;
+      height: 20px;
+      background-repeat: no-repeat;
+      margin: 0 1rem;
+    }
+    .face {
+      background-image: url("/images/icon-facebook.svg");
+    }
+    .insta {
+      background-image: url("/images/icon-instagram.svg");
+    }
+    .twit {
+      background-image: url("/images/icon-twitter.svg");
+      height: 17px;
+    }
+    .pint {
+      background-image: url("/images/icon-pinterest.svg");
+    }
+  }
+  .attribution {
+    font-size: 15px;
+    padding: 0 1rem;
+    text-align: center;
+    color: $graphicTextCyan;
+    a {
+      text-decoration: none;
+      color: $footerCyan;
+      font-weight: 700;
+    }
+  }
+}

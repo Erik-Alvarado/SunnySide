@@ -14,9 +14,24 @@ header {
     justify-content: space-between;
     .link-holder {
       display: flex;
+      position: relative;
       .links {
         display: none;
         list-style: none;
+      }
+    }
+    &.active {
+      .link-holder {
+        position: absolute;
+        background-color: $base;
+        right: 0;
+        left: 0;
+        top: 6rem;
+        margin: auto;
+        .links {
+          display: flex;
+          flex-direction: column;
+        }
       }
     }
     .ham-menu {
