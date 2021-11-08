@@ -3,18 +3,29 @@ main {
 
 .container {
   .full-bar {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    @include breakpoint-up(small) {
+      grid-template-columns: repeat(2, 1fr);
+    }
     .art {
       height: 19.5rem;
       background-size: 100%;
       background-position: center;
       background-repeat: no-repeat;
+      @include breakpoint-up(small) {
+        background-size: cover;
+      }
     }
     .text {
       padding: 1.5rem;
       text-align: center;
       margin: 1rem 0 2rem;
+      @include breakpoint-up(small) {
+        margin: 0;
+        padding: 0.5rem 1rem;
+        text-align: start;
+      }
       h2 {
         font-size: 2rem;
         padding: 1rem 0.5rem;
@@ -50,12 +61,24 @@ main {
           left: 0;
           opacity: 25%;
           margin: auto;
+          @include breakpoint-up(small) {
+            margin: 0 -5px;
+          }
         }
       }
     }
     &#egg {
       .art {
         background-image: url("/images/mobile/image-transform.jpg");
+        @include breakpoint-up(small) {
+          grid-column: 2;
+        }
+      }
+      .text {
+        @include breakpoint-up(small) {
+          grid-column: 1;
+          grid-row: 1;
+        }
       }
       .learn {
         span {
@@ -74,41 +97,43 @@ main {
       }
     }
   }
-  .card {
-    height: 37.5rem;
-    padding: 3rem 1rem;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    justify-content: flex-end;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    background-position: center;
+  .card-box {
+    .card {
+      height: 37.5rem;
+      padding: 3rem 1rem;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: flex-end;
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
 
-    h2 {
-      font-size: 1.75rem;
-      margin-bottom: 1.5rem;
-    }
-    p {
-      font-size: 16px;
-      line-height: 1.5rem;
-    }
-    &#graphics {
-      background-image: url("/images/mobile/image-graphic-design.jpg");
       h2 {
-        color: $graphicTextCyan;
+        font-size: 1.75rem;
+        margin-bottom: 1.5rem;
       }
       p {
-        color: $graphicTextCyan;
+        font-size: 16px;
+        line-height: 1.5rem;
       }
-    }
-    &#photos {
-      background-image: url("/images/mobile/image-photography.jpg");
-      h2 {
-        color: $photoTextBlue;
+      &#graphics {
+        background-image: url("/images/mobile/image-graphic-design.jpg");
+        h2 {
+          color: $graphicTextCyan;
+        }
+        p {
+          color: $graphicTextCyan;
+        }
       }
-      P {
-        color: $photoTextBlue;
+      &#photos {
+        background-image: url("/images/mobile/image-photography.jpg");
+        h2 {
+          color: $photoTextBlue;
+        }
+        P {
+          color: $photoTextBlue;
+        }
       }
     }
   }
