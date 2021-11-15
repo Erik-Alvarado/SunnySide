@@ -8,6 +8,16 @@ header {
   display: flex;
   flex-direction: column;
   align-content: center;
+  @include breakpoint-up(small) {
+    background-position: 0rem -25rem;
+  }
+  @include breakpoint-up(medium) {
+    background-position: 0rem -35rem;
+  }
+  @include breakpoint-up(large) {
+    background-position: center;
+    background-image: url("/images/desktop/image-header.jpg");
+  }
 
   .navbar {
     display: flex;
@@ -18,6 +28,29 @@ header {
       .links {
         display: none;
         list-style: none;
+
+        @include breakpoint-up(large) {
+          display: flex;
+          a {
+            text-decoration: none;
+            margin-right: 3rem;
+            color: $base;
+          }
+        }
+        .link {
+          &#contact {
+            a {
+              border-radius: 2rem;
+              background-color: $base;
+              margin: -13px 0 0 0;
+              padding: 1rem;
+              color: black;
+              font-family: "Fraunces", serif;
+              text-transform: uppercase;
+              font-size: 1rem;
+            }
+          }
+        }
       }
     }
     &.active {
@@ -33,6 +66,12 @@ header {
         justify-content: center;
         text-align: center;
         box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+        @include breakpoint-up(large) {
+          background-color: transparent;
+          box-shadow: 0 0 0 0;
+          top: 0;
+          justify-content: end;
+        }
         &::before {
           content: " ";
           border-style: solid;
@@ -41,15 +80,24 @@ header {
           position: absolute;
           right: 0;
           top: -20px;
+          @include breakpoint-up(large) {
+            display: none;
+          }
         }
         .links {
           display: flex;
           flex-direction: column;
+          @include breakpoint-up(large) {
+            flex-direction: row;
+          }
           .link {
             line-height: 3rem;
             a {
               text-decoration: none;
               color: $darkGrayBlue;
+              @include breakpoint-up(large) {
+                color: $base;
+              }
             }
             &#contact {
               background-color: $yellow;
@@ -57,11 +105,20 @@ header {
               // line-height: 2.5rem;
               padding: 0 1.5rem;
               margin: 1rem 0;
+              @include breakpoint-up(large) {
+                background-color: $base;
+                margin: 0;
+                padding: 0;
+              }
               a {
                 color: black;
                 font-family: "Fraunces", serif;
                 text-transform: uppercase;
                 font-size: 1rem;
+                @include breakpoint-up(large) {
+                  margin: 0;
+                  padding: 0 1.5rem;
+                }
               }
             }
           }
@@ -76,6 +133,9 @@ header {
       justify-content: space-between;
       transform-origin: left center;
       transition: ease 0.3s;
+      @include breakpoint-up(large) {
+        display: none;
+      }
       div {
         height: 2px;
         background-color: $base;
@@ -92,6 +152,7 @@ header {
       color: $base;
       text-transform: uppercase;
       font-size: 3rem;
+      letter-spacing: 0.5rem;
     }
     .arrow {
       margin-top: 2rem;
