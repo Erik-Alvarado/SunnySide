@@ -53,6 +53,12 @@ header {
   }
 }
 
+@media (min-width: 87em) {
+  header {
+    height: 34.65rem;
+  }
+}
+
 header .navbar {
   display: flex;
   justify-content: space-between;
@@ -75,19 +81,30 @@ header .navbar .link-holder .links {
   header .navbar .link-holder .links a {
     text-decoration: none;
     margin-right: 3rem;
+    color: rgba(255, 255, 255, 0.75);
+    transition: ease 0.3s;
+  }
+  header .navbar .link-holder .links a:hover {
     color: white;
   }
 }
 
-header .navbar .link-holder .links .link#contact a {
-  border-radius: 2rem;
-  background-color: white;
-  margin: -13px 0 0 0;
-  padding: 1rem;
-  color: black;
-  font-family: "Fraunces", serif;
-  text-transform: uppercase;
-  font-size: 1rem;
+@media (min-width: 64em) {
+  header .navbar .link-holder .links .link#contact a {
+    border-radius: 2rem;
+    margin: -13px 0 0 0;
+    background-color: white;
+    padding: 0.75rem 1.5rem;
+    color: black;
+    font-family: "Fraunces", serif;
+    text-transform: uppercase;
+    font-size: 1rem;
+    transition: ease 0.3s;
+  }
+  header .navbar .link-holder .links .link#contact a:hover {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.35);
+  }
 }
 
 header .navbar.active .link-holder {
@@ -255,6 +272,12 @@ header .contain .arrow {
   }
 }
 
+@media (min-width: 87em) {
+  .container .full-bar .art {
+    height: 37.5rem;
+  }
+}
+
 .container .full-bar .text {
   padding: 1.5rem;
   text-align: center;
@@ -290,7 +313,7 @@ header .contain .arrow {
 
 @media (min-width: 87em) {
   .container .full-bar .text {
-    padding: 5rem 8rem;
+    padding: 8rem 6rem 8rem 8rem;
     margin: 1rem 0 0 0;
   }
 }
@@ -304,6 +327,13 @@ header .contain .arrow {
 @media (min-width: 39.9375em) {
   .container .full-bar .text h2 {
     padding: 0.75rem 0;
+  }
+}
+
+@media (min-width: 87em) {
+  .container .full-bar .text h2 {
+    padding: 0.75rem 3rem 0.75rem 0;
+    font-size: 2.375rem;
   }
 }
 
@@ -331,6 +361,10 @@ header .contain .arrow {
   position: relative;
 }
 
+.container .full-bar .text .learn:hover span {
+  opacity: 100%;
+}
+
 .container .full-bar .text .learn a {
   text-decoration: none;
   z-index: 1;
@@ -354,6 +388,7 @@ header .contain .arrow {
   left: 0;
   opacity: 25%;
   margin: auto;
+  transition: ease 0.3s;
 }
 
 @media (min-width: 39.9375em) {
@@ -399,6 +434,15 @@ header .contain .arrow {
   }
 }
 
+@media (min-width: 87em) {
+  .container .full-bar#cup .text {
+    padding: 8rem 7rem 8rem 8rem;
+  }
+  .container .full-bar#cup .text h2 {
+    padding: 0.75rem 2rem 0.75rem 0;
+  }
+}
+
 .container .full-bar#cup .learn span {
   background-color: #fe7867;
 }
@@ -438,6 +482,12 @@ header .contain .arrow {
   }
 }
 
+@media (min-width: 87em) {
+  .container .card-box .card {
+    height: 35.5rem;
+  }
+}
+
 .container .card-box .card h2 {
   font-size: 1.75rem;
   margin-bottom: 1.5rem;
@@ -446,6 +496,12 @@ header .contain .arrow {
 .container .card-box .card p {
   font-size: 16px;
   line-height: 1.5rem;
+}
+
+@media (min-width: 87em) {
+  .container .card-box .card p {
+    padding: 0 10rem;
+  }
 }
 
 .container .card-box .card#graphics {
@@ -488,6 +544,12 @@ header .contain .arrow {
   padding: 3.5rem 1rem;
   display: flex;
   flex-direction: column;
+}
+
+@media (min-width: 87em) {
+  .container .testimonials {
+    padding: 8rem;
+  }
 }
 
 .container .testimonials h4 {
@@ -604,6 +666,12 @@ header .contain .arrow {
   }
 }
 
+@media (min-width: 87em) {
+  .container .bottom-img span {
+    height: 26.5rem;
+  }
+}
+
 .container .bottom-img .milk {
   background-image: url("/images/mobile/image-gallery-milkbottles.jpg");
 }
@@ -664,9 +732,26 @@ footer .foot-nav {
   justify-content: space-evenly;
 }
 
+@media (min-width: 64em) {
+  footer .foot-nav {
+    justify-content: center;
+  }
+}
+
+@media (min-width: 64em) {
+  footer .foot-nav span:nth-child(2) a {
+    margin: 0 4rem;
+  }
+}
+
 footer .foot-nav a {
   text-decoration: none;
   color: #458c7e;
+  transition: ease 0.3s;
+}
+
+footer .foot-nav a:hover {
+  color: white;
 }
 
 footer .social {

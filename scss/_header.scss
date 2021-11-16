@@ -18,6 +18,9 @@ header {
     background-position: center;
     background-image: url("/images/desktop/image-header.jpg");
   }
+  @include breakpoint-up(x-large) {
+    height: 34.65rem;
+  }
 
   .navbar {
     display: flex;
@@ -34,20 +37,31 @@ header {
           a {
             text-decoration: none;
             margin-right: 3rem;
-            color: $base;
+            color: $baseOpacHi;
+            transition: ease 0.3s;
+            &:hover {
+              color: $base;
+            }
           }
         }
         .link {
           &#contact {
             a {
-              border-radius: 2rem;
-              background-color: $base;
-              margin: -13px 0 0 0;
-              padding: 1rem;
-              color: black;
-              font-family: "Fraunces", serif;
-              text-transform: uppercase;
-              font-size: 1rem;
+              @include breakpoint-up(large) {
+                border-radius: 2rem;
+                margin: -13px 0 0 0;
+                background-color: $base;
+                padding: 0.75rem 1.5rem;
+                color: black;
+                font-family: "Fraunces", serif;
+                text-transform: uppercase;
+                font-size: 1rem;
+                transition: ease 0.3s;
+                &:hover {
+                  color: $base;
+                  background-color: $baseOpacLow;
+                }
+              }
             }
           }
         }

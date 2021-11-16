@@ -14,9 +14,23 @@ footer {
     width: 100%;
     display: flex;
     justify-content: space-evenly;
+    @include breakpoint-up(large) {
+      justify-content: center;
+    }
+    span:nth-child(2) {
+      a {
+        @include breakpoint-up(large) {
+          margin: 0 4rem;
+        }
+      }
+    }
     a {
       text-decoration: none;
       color: $footerCyan;
+      transition: ease 0.3s;
+      &:hover {
+        color: $base;
+      }
     }
   }
   .social {

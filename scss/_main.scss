@@ -21,6 +21,9 @@ main {
         // background-size: contain;
         height: 26.75rem;
       }
+      @include breakpoint-up(x-large) {
+        height: 37.5rem;
+      }
     }
     .text {
       padding: 1.5rem;
@@ -42,7 +45,7 @@ main {
         padding: 3.5rem 6rem;
       }
       @include breakpoint-up(x-large) {
-        padding: 5rem 8rem;
+        padding: 8rem 6rem 8rem 8rem;
         margin: 1rem 0 0 0;
       }
       h2 {
@@ -51,6 +54,10 @@ main {
         color: $veryDarkDesat;
         @include breakpoint-up(small) {
           padding: 0.75rem 0;
+        }
+        @include breakpoint-up(x-large) {
+          padding: 0.75rem 3rem 0.75rem 0;
+          font-size: 2.375rem;
         }
       }
       p {
@@ -68,6 +75,11 @@ main {
         display: flex;
         flex-direction: column;
         position: relative;
+        &:hover {
+          span {
+            opacity: 100%;
+          }
+        }
         a {
           text-decoration: none;
           z-index: 1;
@@ -89,6 +101,7 @@ main {
           left: 0;
           opacity: 25%;
           margin: auto;
+          transition: ease 0.3s;
           @include breakpoint-up(small) {
             margin: 0 -5px;
           }
@@ -124,6 +137,14 @@ main {
           background-image: url("/images/desktop/image-stand-out.jpg");
         }
       }
+      @include breakpoint-up(x-large) {
+        .text {
+          padding: 8rem 7rem 8rem 8rem;
+          h2 {
+            padding: 0.75rem 2rem 0.75rem 0;
+          }
+        }
+      }
       .learn {
         span {
           background-color: $softRed;
@@ -153,7 +174,9 @@ main {
       @include breakpoint-up(large) {
         height: 26.5rem;
       }
-
+      @include breakpoint-up(x-large) {
+        height: 35.5rem;
+      }
       h2 {
         font-size: 1.75rem;
         margin-bottom: 1.5rem;
@@ -161,6 +184,9 @@ main {
       p {
         font-size: 16px;
         line-height: 1.5rem;
+        @include breakpoint-up(x-large) {
+          padding: 0 10rem;
+        }
       }
       &#graphics {
         background-image: url("/images/mobile/image-graphic-design.jpg");
@@ -192,6 +218,9 @@ main {
     padding: 3.5rem 1rem;
     display: flex;
     flex-direction: column;
+    @include breakpoint-up(x-large) {
+      padding: 8rem;
+    }
     h4 {
       text-transform: uppercase;
       text-align: center;
@@ -273,6 +302,9 @@ main {
       }
       @include breakpoint-up(large) {
         height: 20rem;
+      }
+      @include breakpoint-up(x-large) {
+        height: 26.5rem;
       }
     }
     .milk {
